@@ -1,0 +1,244 @@
+@use "../global" as *;
+
+.header {
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+@media (max-width: 1023px) {
+    .header {
+        height: 80px;
+    }
+}
+.header__logo--image {
+    width: 120px;
+}
+.header__nav--list {
+    display: flex;
+    font-size: clamp(1rem, 2vw, 2rem);
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+}
+.header__nav--item > a {
+    border-bottom: 2px solid transparent;
+    display: block;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: bold;
+    padding: 5px 20px;
+    text-decoration: none;
+    transition: border-color .3s;
+}
+.header__nav--list.open li a {
+    font-size: 2rem;
+}
+.header__nav--item > a:hover {
+    border-bottom: 2px solid #2eaafd;
+    color: #2eaafd;
+    transition: .3s;
+}
+
+.header__nav--list.open {
+    padding: 0;
+    right: 0;
+}
+
+/* ... 他のCSS ... */
+
+/* ドロップダウンの基本スタイル */
+.header__dropdown {
+    background-color: #d2d2d2;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.2); /*影を付ける*/
+    display: none; /* 初期状態では非表示 */
+    list-style: none;
+    padding: 20px;
+    position: absolute; /* 親要素に対して絶対配置 */
+    right: 10px;
+    top: 100%; /* 親要素のすぐ下に配置 */
+    z-index: 100; /* 他の要素よりも上に表示 */
+}
+
+/* ドロップダウンアイテムのスタイル */
+.header__dropdown--item {
+    color: #333333;
+    display: block;
+    font-size: 1.5rem;
+    padding: 5px 15px;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+.header__dropdown--item:hover {
+    color: #2eaafd;
+    transform: scale(1.2);
+    transition: all .3s ease-in-out;
+}
+
+/*ドロップダウンの表示非表示を切り替えるためのクラス*/
+.header__dropdown.show {
+    display: block;
+}
+
+/* Contactボタンの見た目 */
+.header__nav--item--dropdown .btn {
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #583327;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: bold;
+    padding: 5px 20px;
+    text-decoration: none;
+    transition: border-color .3s;
+}
+
+.header__nav--item--dropdown .btn:hover {
+    border-bottom: 2px solid #2eaafd;
+    color: #2eaafd;
+    transition: .3s;
+}
+
+// .header__nav--item--dropdown {
+//     position: relative;
+// }
+// .header__dropdown {
+//     align-items: center;
+//     display: block;
+//     margin: 0;
+//     padding: 0;
+//     transition: all .3s ease-in-out;
+//     & li {
+//         display: none;
+//     }
+//     &.show li {
+//         display: block;
+//         padding: 0 10px;
+//         text-align: center;
+
+//         a {
+//             color: #333333;
+//             font-size: 1.5rem;
+//             text-decoration: none;
+//             transition: color .3s;
+
+//             &:hover {
+//                 color: #2eaafd;
+//             }
+//         }
+//     }
+// }
+// .header__dropdown.show {
+//     align-items: center;
+//     background-color: #d2d2d2;
+//     border-radius: 20px;
+//     display: block;
+//     margin: 0;
+//     padding: 20px;
+//     position: absolute;
+//     right: -20px;
+//     top: 70px;
+// }
+
+// .btn-dark {
+//     background-color: #ffffff;
+//     border: none;
+//     color: #583327;
+//     font-size: 1.5rem;
+//     font-weight: bold;
+// }
+// .btn-dark:hover {
+//     background-color: #ffffff;
+//     border-bottom: 2px solid #2eaafd;
+//     border-radius: 0;
+//     color: #2eaafd;
+//     transition: .3s;
+// }
+
+// responsive
+@media (max-width: 1023px) {
+    .header__logo--image {
+        width: 100px;
+    }
+    .header__nav--list {
+        align-items: center;
+        background: #999999;
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        position: fixed;
+        right: -120%;
+        top: 80px;
+        transition: all .6s;
+        width: 100%;
+        z-index: 999;
+    }
+    .header__nav--list li {
+        margin: 10px 0;
+        z-index: 999;
+    }
+
+    .js-hamburger {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1023px) {
+    .js-hamburger {
+        opacity: 0;
+    }
+}
+/*========= ボタンのためのCSS ===============*/
+.js-hamburger {
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    top: 10px;
+    width: 60px;
+    z-index: 9999;
+}
+
+/*×に変化*/
+.js-hamburger span {
+    background-color: #666666;
+    border-radius: 2px;
+    display: inline-block;
+    height: 3px;
+    left: 10px;
+    position: absolute;
+    transition: all .4s;
+    width: 55%;
+}
+.js-hamburger span:nth-of-type(1) {
+    top: 15px;
+}
+.js-hamburger span:nth-of-type(2) {
+    top: 25px;
+}
+.js-hamburger span:nth-of-type(3) {
+    top: 35px;
+}
+.js-hamburger.is-active span:nth-of-type(1) {
+    left: 18px;
+    top: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 60%;
+}
+.js-hamburger.is-active span:nth-of-type(2) {
+    opacity: 0;
+}
+.js-hamburger.is-active span:nth-of-type(3) {
+    left: 18px;
+    top: 30px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 60%;
+}

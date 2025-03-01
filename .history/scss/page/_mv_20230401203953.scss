@@ -1,0 +1,27 @@
+@use "../global" as *;
+.mv{
+  position:relative;
+  height:auto;
+}
+.mv__wrapper{
+  width:100%;
+  height:auto;
+  min-height:rem(580);
+  background-image: url(../img/main/mv/mv-sp.png);
+  background-size: cover;
+  @include mq("md") {
+    min-width:initial;
+    background-image: url(../img/main/mv/mv-pc.jpg);
+    background-size: cover;
+  }
+}
+
+.mv__image img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+
+
+
