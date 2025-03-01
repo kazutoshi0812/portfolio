@@ -1,6 +1,6 @@
 @use "../../global" as *;
 
-.section-future__headline {
+.section__future--headline {
     color: $main-color;
     font-family: "'Lora', serif, Hiragino Mincho Pro", "Lato", sans-serif;
     font-size: clamp(1rem, 5vw, 3rem);
@@ -20,7 +20,7 @@
 }
 
 
-.section-future__line {
+.section__future--line {
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(176,184,189,1) 50%, rgba(35,81,91,1) 100%);
     height: 2px;
     margin: 0 0 60px 40px;
@@ -28,11 +28,11 @@
 }
 
 @media (max-width: 768px) {
-    .section-future__headline {
+    .section__future--headline {
         display: flex;
         justify-content: center;
     }
-    .section-future__line {
+    .section__future--line {
         margin: 0 auto;
         width: 70%;
     }

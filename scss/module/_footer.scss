@@ -16,19 +16,19 @@
     }
 }
 
-.footer-logo-image {
+.footer__logo--image {
     height: 100px;
     width: 200px;
 }
 @media (max-width: 768px) {
-    .footer-logo-image {
+    .footer__logo--image {
         height: 80px;
         margin-top: 20px;
         width: 120px;
     }
 }
 
-.footer-wrapper {
+.footer__wrapper {
     height: 80%;
     justify-content: center;
     margin: 0;
@@ -36,12 +36,12 @@
     width: 500px;
 }
 @media (max-width: 768px) {
-    .footer-wrapper {
+    .footer__wrapper {
         width: 100%;
     }
 }
 
-.footer-contact-container {
+.footer__contact--container {
     align-items: center;
     display: flex;
     gap: 50px;
@@ -52,7 +52,7 @@
     }
 }
 @media (max-width: 768px) {
-    .footer-contact-container {
+    .footer__contact--container {
         flex-direction: column;
         gap: 10px;
     }
@@ -61,7 +61,7 @@
 .footer-contact-container > a:hover {
     transform: scale(1.2);
 }
-.list-sns {
+.list__sns {
     align-items: center;
     display: flex;
     gap: 30px;
@@ -71,30 +71,30 @@
     width: 250px;
 }
 @media (max-width: 767px) {
-    .list-sns {
+    .list__sns {
         justify-content: center;
         min-width: 250px;
     }
 }
 
-.footer-sns-img {
+.footer__sns--img {
     transition: transform .3s ease-in-out;
 }
-.footer-sns-img:hover {
+.footer__sns--img:hover {
     transform: scale(1.2);
 }
 
-.footer-logo-text {
+.footer__logo--text {
     margin: 0 auto 20px;
     width: 50%;
 }
 @media (max-width: 768px) {
-    .footer-logo-text {
+    .footer__logo--text {
         width: 80%;
     }
 }
 
-.footer-logo-text:hover {
+.footer__logo--text:hover {
     background-color: $main-color;
     border-radius: 5px;
     color: $white;
@@ -104,7 +104,7 @@
     font-size: clamp(2rem, 4vw, 3rem);
 }
 
-.footer-copy {
+.footer__copyright {
     background-color: $main-base;
     border-top: solid 1px #000000;
     display: block;
@@ -112,11 +112,11 @@
     text-align: center;
 }
 @media screen and (max-width: 768px) {
-    .footer-copy {
+    .footer__copyright {
         padding: 20px;
     }
 }
 
-.footer-line {
+.footer__line {
     margin: 0;
 }

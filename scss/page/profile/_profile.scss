@@ -1,6 +1,6 @@
 @use "../../global" as *;
 
-.about-section {
+.section__about {
     background-color: #ffecc7;
     padding: 0 0 60px 0;
 }
@@ -26,7 +26,7 @@
 }
 
 
-.section-headline__line, .section-service-headline-line {
+.section__headline--line, .section__service--headline-line {
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(176,184,189,1) 50%, rgba(35,81,91,1) 100%);
     height: 2px;
     margin: 0 0 60px 40px;
@@ -37,15 +37,15 @@
     .section-profile-about {
         padding-top: 50px;
     }
-    .section-headline {
+    .section__headline {
         display: flex;
         justify-content: center;
     }
-    .section-headline__line, .section-service-headline-line {
+    .section__headline--line, .section__service--headline-line {
         margin: 0 auto;
         width: 90%;
     }
-    .about-caption__self-introduction {
+    .about__caption--self-introduction {
         justify-content: center;
     }
 }
@@ -66,7 +66,7 @@
     transform: scale(1.2);
 }
 
-.about-caption {
+.about__caption {
     padding: 20px 40px;
     &__self-introduction {
         display: flex;
@@ -79,10 +79,10 @@
         font-size: 2rem;
         font-weight: bold;
     }
-    .about-caption__text {
+    .about__caption--text {
         margin: 20px 0;
     }
-    .about-description__text {
+    .about__description--text {
         -webkit-box-orient: vertical;
         display: -webkit-box;
         -webkit-line-clamp: 3;
@@ -100,7 +100,7 @@
     }
 }
 
-.about-button {
+.about__button {
     align-items: center;
     background-color: #fafafa;
     border: 2px solid #454545;
@@ -123,10 +123,10 @@
         transform: translateY(1px);
     }
 }
-.about-button {
+.about__button {
     display: flex;
 }
-.about-button::after {
+.about__button::after {
     border-bottom: solid 1px;
     border-right: solid 2px;
     content: "";

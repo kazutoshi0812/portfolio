@@ -87,6 +87,11 @@ $(function () {
       }
     });
 
+    // ページ読み込み時にトップに戻る
+    $(window).on('beforeunload', function() {
+      $(window).scrollTop(0);
+    });
+
     // .section-main-visual > strong 要素に対する処理
     $('.section__contents--description').each(function () {
       const targetPosition = $(this).offset().top;
@@ -99,7 +104,7 @@ $(function () {
       }
     });
 
-    $('.section-future__headline, .section__headline').each(function () {
+    $('.section__future--headline, .section__headline').each(function () {
       const targetPosition = $(this).offset().top;
       if (scrollAmount > targetPosition - wHeight + 60) {
         if (!$(this).hasClass("fadeIn")) {
