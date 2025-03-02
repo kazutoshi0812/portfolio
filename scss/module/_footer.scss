@@ -15,11 +15,13 @@
         padding: 20px;
     }
 }
-
-.footer__logo--image {
-    height: 100px;
-    width: 200px;
+.footer--logo {
+    font-size: 2rem;
 }
+// .footer__logo--image {
+//     height: 100px;
+//     width: 200px;
+// }
 @media (max-width: 768px) {
     .footer__logo--image {
         height: 80px;
@@ -57,7 +59,9 @@
         gap: 10px;
     }
 }
-
+.footer__logo--image {
+    width: 80%;
+}
 .footer-contact-container > a:hover {
     transform: scale(1.2);
 }

@@ -16,7 +16,7 @@
     <meta property="og:site_name" content="">
     <meta property="og:description" content="">
 <!-- ファビコン -->
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/my_logo.svg" type="image/x-icon">
 <!-- css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
@@ -29,34 +29,34 @@
 
     <!-- header -->
     <header class="header">
-        <div class="header-logo">
+        <div class="header__logo">
             <a href="index.html" target="_blank">
-                <img class="header-logo-image" src="./img/my_logo.svg" alt="ロゴ画像">
+                <img class="header__logo--image" src="./img/my_logo.svg" alt="ロゴ画像">
             </a>
         </div>
 
         <!-- navigation ber -->
-        <nav class="header-nav">
-            <ul class="header-navlist">
-                <li class="header-navitem">
+        <nav class="header__nav">
+            <ul class="header__nav--list">
+                <li class="header__nav--item">
                     <a href="#about me">About me</a>
                 </li>
-                <li class="header-navitem">
+                <li class="header__nav--item">
                     <a href="#resume">Resume</a>
                 </li>
-                <li class="header-navitem">
+                <li class="header__nav--item">
                     <a href="#skills">Skills</a>
                 </li>
-                <li class="header-navitem__dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="header__nav--item--dropdown">
+                    <button type="button" class="btn btn-dark dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
                         Contacts
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSfYYOqD9AKmXgsjSTS7_x4cjCJm6WndbgwoX2eQqVXnnvd4Ww/viewform" target="_blank">Contact</a></li>
-                        <li><a class="dropdown-item" href="https://line.me" target="_blank">LINE</a></li>
-                        <li><a class="dropdown-item" href="https://x.com/kazumk?s=21&t=M8LSpk_vyGkLbbvRt_O8XA" target="_blank">X</a></li>
-                        <li><a class="dropdown-item" href="https://facebook.com" target="_blank">Facebook</a></li>
-                        <li><a class="dropdown-item" href="https://www.instagram.com/kazutoshi_ohashi/?igsh=MXhjc2tnOXgydHd3bQ%3D%3D&utm_source=qr" target="_blank">instagram</a></li>
+                    </button>
+                    <ul class="header__dropdown" id="dropdownMenu">
+                        <li><a class="header__dropdown--item" href="https://docs.google.com/forms/d/e/1FAIpQLSfYYOqD9AKmXgsjSTS7_x4cjCJm6WndbgwoX2eQqVXnnvd4Ww/viewform" target="_blank">Contact</a></li>
+                        <li><a class="header__dropdown--item" href="https://line.me" target="_blank">LINE</a></li>
+                        <li><a class="header__dropdown--item" href="https://x.com/kazumk?s=21&t=M8LSpk_vyGkLbbvRt_O8XA" target="_blank">X</a></li>
+                        <li><a class="header__dropdown--item" href="https://www.facebook.com/ohashi.kazutoshi/" target="_blank">Facebook</a></li>
+                        <li><a class="header__dropdown--item" href="https://www.instagram.com/kazutoshi_ohashi/?igsh=MXhjc2tnOXgydHd3bQ%3D%3D&utm_source=qr" target="_blank">Instagram</a></li>
                     </ul>
                 </li>
             </ul>
@@ -70,68 +70,68 @@
         </nav>
     </header>
 
-    <div class="section-main-visual">
-        <div class="main-visual__image">
-            <img src="./img/main-visual/mv-img.jpg" alt="">
-            <div class="mv-custom-shape">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-                </svg>
-            </div>
-        </div>
+    <div class="section__main--visual">
         <strong>
             Profile<br/>
             自己紹介
         </strong>
+        <div class="main__visual--image">
+            <img src="./img/main-visual/mv-img.jpg" alt="">
+            <div class="mv__custom-shape">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" width="100%">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </div>
     </div>
 
     <!-- About me(自己紹介部分) -->
-    <section class="section-profile-about" id="about me">
-        <div class="section-profile__headline">
-            <h2 class="profile-headline headline-name">
+    <section class="section__profile--about" id="about me">
+        <div class="section__profile--headline">
+            <h2 class="section__headline headline--name">
                 Profile<span>自己紹介</span>
             </h2>
-            <div class="profile-headline__line"></div>
+            <div class="profile__headline--line"></div>
         </div>
         <figure class="about">
             <img class="my-image" src="./img/my photo-1.png" alt="My image">
-            <figcaption class="profile-text__wrapper">
-                <p class="profile-text__my-name">
+            <figcaption class="profile__text--wrapper">
+                <p class="profile__text--my-name">
                     大橋　和敏
-                    <span class="profile-text__my-name__primary">Kazutoshi Ohashi</span>
+                    <span class="profile__text--my-name--primary">Kazutoshi Ohashi</span>
                 </p>
-                <p class="profile-text__jobs">Frontend Dev</p>
-                <table class="profile-table">
-                    <tbody class="profile-text__inner">
-                        <tr class="profile-list">
-                            <th class="profile-list__title">
+                <p class="profile__text--jobs">Frontend Dev</p>
+                <table class="profile__table">
+                    <tbody class="profile__text--inner">
+                        <tr class="profile--list">
+                            <th class="profile__list--title">
                                 生年月日
                             </th>
-                            <td class="profile-list__item">
+                            <td class="profile__list--item">
                                 1978年8月12日
                             </td>
                         </tr>
-                        <tr class="profile-list">
-                            <th class="profile-list__title">
+                        <tr class="profile--list">
+                            <th class="profile__list--title">
                                 生息地
                             </th>
-                            <td class="profile-list__item">
+                            <td class="profile__list--item">
                                 現在は神奈川県
                             </td>
                         </tr>
-                        <tr class="profile-list">
-                            <th class="profile-list__title">
+                        <tr class="profile--list">
+                            <th class="profile__list--title">
                                 趣味
                             </th>
-                            <td class="profile-list__item">
+                            <td class="profile__list--item">
                                 コーディング、釣り、フットサル
                             </td>
                         </tr>
-                        <tr class="profile-list">
-                            <th class="profile-list__title">
+                        <tr class="profile--list">
+                            <th class="profile__list--title">
                                 目標
                             </th>
-                            <td class="profile-list__item">
+                            <td class="profile__list--item">
                                 デザインからコーディングまで<br/>
                                 一貫してご依頼いただけるようになること
                             </td>
@@ -140,7 +140,7 @@
                 </table>
             </figcaption>
         </figure>
-        <p class="profile-description__text">
+        <p class="profile__description--text">
             programmingへの情熱を持ち、現在はFrontendのプログラミング言語を学習中です。<br/>
             Webサイトやアプリの開発にも挑戦しています。
             コードを書くことが好きで、問題解決力を磨くために日々努力しています。<br/>
@@ -150,36 +150,36 @@
     </section>
 
     <!-- resume 経歴 -->
-    <section class="section-service profile-section-resume" id="resume">
-        <div class="section-headline-contents">
-            <h2 class="section-headline headline-name">
+    <section class="section__service profile__section--resume" id="resume">
+        <div class="section__headline-contents">
+            <h2 class="section__headline headline--name">
                 resume<span>経歴</span>
             </h2>
-            <div class="section-service-headline-line"></div>
+            <div class="section__service--headline-line"></div>
         </div>
-        <div class="section-resume">
-            <table class="section-resume_item">
-                <tr class="section-resume_list">
+        <div class="section--resume">
+            <table class="section__resume--item">
+                <tr class="section__resume--list">
                     <td>1978年</td>
                     <td>神奈川県にて生を受け、物心がついた時からサッカーを始める。</td>
                 </tr>
-                <tr class="section-resume_list">
+                <tr class="section__resume--list">
                     <td>1997年</td>
                     <td>高校卒業後、板前の道へ</td>
                 </tr>
-                <tr class="section-resume_list">
+                <tr class="section__resume--list">
                     <td>2002年</td>
                     <td>人生に悩み板前から自動車部品メーカーの開発部へ転職</td>
                 </tr>
-                <tr class="section-resume_list">
+                <tr class="section__resume--list">
                     <td>2017年</td>
                     <td>スマートフォンコネクタ開発会社へ転職</td>
                 </tr>
-                <tr class="section-resume_list">
+                <tr class="section__resume--list">
                     <td>2019年</td>
                     <td>資源回収のトラックドライバーへ転職</td>
                 </tr>
-                <tr class="section-resume_list">
+                <tr class="section__resume--list">
                     <td>2022年</td>
                     <td>プログラミングを独学でも学べると知り、猛勉強！</td>
                 </tr>
@@ -188,12 +188,12 @@
     </section>
 
     <!-- What I can do 私ができること-->
-    <section class="section-future" id="skills">
-        <div class="section-headline-contents">
-            <h2 class="section-future__headline headline-name">
+    <section class="section__future" id="skills">
+        <div class="section__headline--contents">
+            <h2 class="section__future--headline headline--name">
                 Skills<span>スキル</span>
             </h2>
-            <div class="section-future__line"></div>
+            <div class="section__future--line"></div>
         </div>
         <ul class="grid grid-col-4">
             <li class="grid-item">
@@ -251,14 +251,14 @@
                 </dl>
             </li>
         </ul>
-        <div class="sub-description-wrapper">
-            <p class="service-sub-description ">
+        <div class="sub-description--wrapper">
+            <p class="service__sub--description">
                 HPの修正やリニューアルなどもお気軽にご相談ください!
             </p>
-            <p class="service-sub-description">
+            <p class="service__sub--description">
                 お客様と協力し、成功に導くお手伝いを致します。
             </p>
-            <p class="service-sub-description">
+            <p class="service__sub--description">
                 ぜひ、お問い合わせください。
             </p>
         </div>
@@ -268,36 +268,36 @@
 
     <!-- footer -->
     <footer class="footer">
-        <div class="footer-logo-image">
+        <div class="footer__logo">
             <a href="index.html">
-                <img src="./img/my logo.svg" alt="フッターロゴ">
+                <img class="footer__logo--image" src="./img/my logo.svg" alt="フッターロゴ">
             </a>
         </div>
-        <div class="footer-wrapper">
-            <div class="footer-logo-text">
-                <a class="footer-logo">K's coding</a>
+        <div class="footer__wrapper">
+            <div class="footer__logo--text">
+                <a class="footer--logo">K's coding</a>
             </div>
-            <div class="footer-contact-container">
+            <div class="footer__contact--container">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYYOqD9AKmXgsjSTS7_x4cjCJm6WndbgwoX2eQqVXnnvd4Ww/viewform" target="_blank">CONTACT</a>
-                <ul class="list-sns">
-                    <li class="list-sns-item">
-                        <a class="footer-snslogo" href="https://www.facebook.com/ohashi.kazutoshi/" target="_blank">
-                            <img class="footer-sns-img" src="./img/sns/facebook.svg" alt="facebook logo">
+                <ul class="list__sns">
+                    <li class="list__sns--item">
+                        <a class="footer__sns--logo" href="https://www.facebook.com/ohashi.kazutoshi/" target="_blank">
+                            <img class="footer__sns--img" src="./img/sns/facebook.svg" alt="facebook logo">
                         </a>
                     </li>
-                    <li>
-                        <a class="footer-snslogo" href="https://www.instagram.com/kazutoshi_ohashi/?igsh=MXhjc2tnOXgydHd3bQ%3D%3D&utm_source=qr" target="_blank">
-                            <img class="footer-sns-img" src="./img/sns/instagram.svg" alt="instagram logo">
+                    <li class="list__sns--item">
+                        <a class="footer__sns--logo" href="https://www.instagram.com/kazutoshi_ohashi/?igsh=MXhjc2tnOXgydHd3bQ%3D%3D&utm_source=qr" target="_blank">
+                            <img class="footer__sns--img" src="./img/sns/instagram.svg" alt="instagram logo">
                         </a>
                     </li>
-                    <li>
-                        <a class="footer-snslogo" href="https://x.com/kazumk?s=21&t=M8LSpk_vyGkLbbvRt_O8XA" target="_blank">
-                            <img class="footer-sns-img" src="./img/sns/twitter.svg" alt="twitter logo">
+                    <li class="list__sns--item">
+                        <a class="footer__sns--logo" href="https://x.com/kazumk?s=21&t=M8LSpk_vyGkLbbvRt_O8XA" target="_blank">
+                            <img class="footer__sns--img" src="./img/sns/twitter.svg" alt="twitter logo">
                         </a>
                     </li>
-                    <li>
-                        <a class="footer-snslogo" href="https://x.com/kazumk?s=21&t=M8LSpk_vyGkLbbvRt_O8XA" target="_blank">
-                            <img class="footer-sns-img" src="./img/sns/line.svg" alt="twitter logo">
+                    <li class="list__sns--item">
+                        <a class="footer__sns--logo" href="https://x.com/kazumk?s=21&t=M8LSpk_vyGkLbbvRt_O8XA" target="_blank">
+                            <img class="footer__sns--img" src="./img/sns/line.svg" alt="twitter logo">
                         </a>
                     </li>
                 </ul>

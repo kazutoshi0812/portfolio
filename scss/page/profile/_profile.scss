@@ -1,12 +1,12 @@
 @use "../../global" as *;
 
 .section__about {
-    background-color: #ffecc7;
+    background-color: #fff1d9;
     padding: 0 0 60px 0;
 }
 
 
-.profile-headline {
+.profile--headline {
     color: $main-color;
     font-family: "'Lora', serif, Hiragino Mincho Pro", "Lato", sans-serif;
     font-size: clamp(2rem, 6vw, 3rem);
@@ -34,7 +34,7 @@
 }
 
 @media (max-width: 768px) {
-    .section-profile-about {
+    .section__profile--about {
         padding-top: 50px;
     }
     .section__headline {

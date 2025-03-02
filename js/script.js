@@ -1,3 +1,11 @@
+$(function(){
+  // ページ読み込み時にトップに戻る
+  $(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+  });
+});
+
+
 
 // ハンバーガーメニュー
 $(function(){
@@ -87,10 +95,6 @@ $(function () {
       }
     });
 
-    // ページ読み込み時にトップに戻る
-    $(window).on('beforeunload', function() {
-      $(window).scrollTop(0);
-    });
 
     // .section-main-visual > strong 要素に対する処理
     $('.section__contents--description').each(function () {
